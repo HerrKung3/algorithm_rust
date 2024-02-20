@@ -1,0 +1,19 @@
+[package]
+name = "algorithm_rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace]
+members = [
+    "a0_stack",
+    "a0_stack/bracket_match",
+    "a1_deque",
+]
+
+[[bin]]
+name = "main"
+path = "src/main"
+
+[dependencies]
