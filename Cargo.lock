@@ -15,8 +15,30 @@ name = "algorithm_rust"
 version = "0.1.0"
 
 [[package]]
+name = "base_convert"
+version = "0.1.0"
+dependencies = [
+ "a0_stack",
+]
+
+[[package]]
 name = "bracket_match"
 version = "0.1.0"
 dependencies = [
  "a0_stack",
+]
+
+[[package]]
+name = "expression_calculate"
+version = "0.1.0"
+dependencies = [
+ "a0_stack",
+ "bracket_match",
+]
+
+[[package]]
+name = "josephus_problem"
+version = "0.1.0"
+dependencies = [
+ "a1_deque",
 ]

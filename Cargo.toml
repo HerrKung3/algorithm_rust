@@ -9,7 +9,10 @@ edition = "2021"
 members = [
     "a0_stack",
     "a0_stack/bracket_match",
+    "a0_stack/base_convert",
+    "a0_stack/expression_calculate",
     "a1_deque",
+    "a1_deque/josephus_problem",
 ]
 
 [[bin]]

@@ -1,5 +1,6 @@
 {
     "rust-analyzer.linkedProjects": [
-        ".\\a0_stack\\bracket_match\\Cargo.toml"
+        ".\\a0_stack\\bracket_match\\Cargo.toml",
+        ".\\a0_stack\\expression_calculate\\Cargo.toml"
     ]
 }
