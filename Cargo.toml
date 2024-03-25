@@ -11,8 +11,10 @@ members = [
     "a0_stack/bracket_match",
     "a0_stack/base_convert",
     "a0_stack/expression_calculate",
-    "a1_deque",
-    "a1_deque/josephus_problem",
+    "a1_queue",
+    "a1_queue/josephus_problem",
+    "a2_dequeue",
+    "a2_dequeue/palindrome_check",
 ]
 
 [[bin]]

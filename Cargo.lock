@@ -7,7 +7,11 @@ name = "a0_stack"
 version = "0.1.0"
 
 [[package]]
-name = "a1_deque"
+name = "a1_queue"
+version = "0.1.0"
+
+[[package]]
+name = "a2_dequeue"
 version = "0.1.0"
 
 [[package]]
@@ -40,5 +44,12 @@ dependencies = [
 name = "josephus_problem"
 version = "0.1.0"
 dependencies = [
- "a1_deque",
+ "a1_queue",
+]
+
+[[package]]
+name = "palindrome_check"
+version = "0.1.0"
+dependencies = [
+ "a2_dequeue",
 ]

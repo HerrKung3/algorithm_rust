@@ -1,4 +1,4 @@
-use a1_deque::Quenue;
+use a1_queue::Quenue;
 
 fn main() {
     let mut q = Quenue::new(3);
