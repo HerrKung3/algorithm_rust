@@ -15,7 +15,15 @@ name = "a2_dequeue"
 version = "0.1.0"
 
 [[package]]
+name = "a3_linked_list"
+version = "0.1.0"
+
+[[package]]
 name = "algorithm_rust"
+version = "0.1.0"
+
+[[package]]
+name = "b0_recursion"
 version = "0.1.0"
 
 [[package]]
@@ -24,6 +32,10 @@ version = "0.1.0"
 dependencies = [
  "a0_stack",
 ]
+
+[[package]]
+name = "base_convert_by_recursion"
+version = "0.1.0"
 
 [[package]]
 name = "bracket_match"

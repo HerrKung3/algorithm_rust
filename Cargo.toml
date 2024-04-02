@@ -15,6 +15,9 @@ members = [
     "a1_queue/josephus_problem",
     "a2_dequeue",
     "a2_dequeue/palindrome_check",
+    "a3_linked_list",
+    "b0_recursion",
+    "b0_recursion/base_convert_by_recursion",
 ]
 
 [[bin]]
