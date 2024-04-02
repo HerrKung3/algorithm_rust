@@ -60,6 +60,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "move_to_tower"
+version = "0.1.0"
+
+[[package]]
 name = "palindrome_check"
 version = "0.1.0"
 dependencies = [

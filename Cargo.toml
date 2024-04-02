@@ -18,6 +18,7 @@ members = [
     "a3_linked_list",
     "b0_recursion",
     "b0_recursion/base_convert_by_recursion",
+    "b0_recursion/move_to_tower",
 ]
 
 [[bin]]
