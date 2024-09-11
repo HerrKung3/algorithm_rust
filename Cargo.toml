@@ -19,7 +19,9 @@ members = [
     "b0_recursion",
     "b0_recursion/base_convert_by_recursion",
     "b0_recursion/move_to_tower",
-    "b0_recursion/number_of_coins"
+    "b0_recursion/number_of_coins",
+    "b1_dynamic_programming",
+    "b1_dynamic_programming/number_of_coins_dp"
 ]
 
 [[bin]]

@@ -27,6 +27,10 @@ name = "b0_recursion"
 version = "0.1.0"
 
 [[package]]
+name = "b1_dynamic_programming"
+version = "0.1.0"
+
+[[package]]
 name = "base_convert"
 version = "0.1.0"
 dependencies = [
@@ -65,6 +69,10 @@ version = "0.1.0"
 
 [[package]]
 name = "number_of_coins"
+version = "0.1.0"
+
+[[package]]
+name = "number_of_coins_dp"
 version = "0.1.0"
 
 [[package]]
