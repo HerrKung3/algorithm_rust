@@ -1,0 +1,16 @@
+[package]
+name = "algorithm_rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace]
+members = [
+    "double_pointer",
+    "double_pointer/leetcode167",
+    "double_pointer/leetcode633",
+    "double_pointer/leetcode345",
+]
+
+[dependencies]
