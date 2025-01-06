@@ -17,6 +17,7 @@ members = [
     "double_pointer/leetcode524", 
     "sort",
     "sort/leetcode215",
+    "sort/leetcode347",
 ]
 
 [dependencies]
