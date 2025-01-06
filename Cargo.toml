@@ -18,6 +18,7 @@ members = [
     "sort",
     "sort/leetcode215",
     "sort/leetcode347",
+    "sort/leetcode451"
 ]
 
 [dependencies]
