@@ -7,7 +7,6 @@ edition = "2021"
 
 [workspace]
 members = [
-    "double_pointer",
     "double_pointer/leetcode167",
     "double_pointer/leetcode633",
     "double_pointer/leetcode345",
@@ -15,11 +14,12 @@ members = [
     "double_pointer/leetcode88",
     "double_pointer/leetcode141",
     "double_pointer/leetcode524", 
-    "sort",
     "sort/leetcode215",
     "sort/leetcode347",
     "sort/leetcode451",
-    "sort/leetcode75",
+    "sort/leetcode75", 
+    "03_greedy/leetcode455", 
+    "03_greedy/leetcode435",
 ]
 
 [dependencies]
