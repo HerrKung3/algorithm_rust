@@ -1,0 +1,6 @@
+max_width = 64
+#自动格式化注释宽度
+wrap_comments = true
+comment_width = 45
+#注释的//后面带空格
+normalize_comments = true

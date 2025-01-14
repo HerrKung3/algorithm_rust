@@ -1,17 +1,20 @@
-pub struct Solution{}
+pub struct Solution {}
 
 impl Solution {
-    pub fn find_longest_word(s: String, mut dictionary: Vec<String>) -> String {
+    pub fn find_longest_word(
+        s: String,
+        mut dictionary: Vec<String>,
+    ) -> String {
         // 先排序
         dictionary.sort_by(|a, b| {
             if a.len() == b.len() {
                 a.cmp(b)
-            }else {
+            } else {
                 b.len().cmp(&a.len())
             }
         });
 
-        //let mut longest: Vec<u8> = vec![];
+        // let mut longest: Vec<u8> = vec![];
         let s = s.into_bytes();
         for word in dictionary.into_iter() {
             let word = word.into_bytes();
@@ -21,9 +24,8 @@ impl Solution {
             if word.len() > s.len() {
                 continue;
             }
-            
+
             for str in s.iter() {
-                
                 if p < word.len() && *str == word[p] {
                     p += 1;
                 }
@@ -41,7 +43,12 @@ impl Solution {
 
 fn main() {
     let s = "abpcplea".to_string();
-    let dictionary = vec!["ale".to_string(), "apple".to_string(), "monkey".to_string(), "plea".to_string()];
+    let dictionary = vec![
+        "ale".to_string(),
+        "apple".to_string(),
+        "monkey".to_string(),
+        "plea".to_string(),
+    ];
     let result = Solution::find_longest_word(s, dictionary);
     println!("longest word = {}", result);
 }

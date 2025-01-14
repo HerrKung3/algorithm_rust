@@ -1,9 +1,6 @@
 pub enum List<T> {
     Const(T, Box<List<T>>),
-    Nil
+    Nil,
 }
 
-impl <T>List<T> {
-
-}
-
+impl<T> List<T> {}

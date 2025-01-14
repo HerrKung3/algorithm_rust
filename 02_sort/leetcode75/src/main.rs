@@ -7,7 +7,11 @@ impl Solution {
         for num in nums.iter() {
             cnt[*num as usize] += 1;
         }
-        *nums = (0..3).flat_map(|n| std::iter::repeat(n).take(cnt[n as usize])).collect();
+        *nums = (0..3)
+            .flat_map(|n| {
+                std::iter::repeat(n).take(cnt[n as usize])
+            })
+            .collect();
     }
 
     pub fn sort_colors1(nums: &mut Vec<i32>) {
@@ -15,23 +19,26 @@ impl Solution {
         let mut less = 0;
         let mut greater = nums.len();
         let mut i = 0;
-        
-        //如果let mut greater = nums.len() - 1;
-        //while i <= greater
+
+        // let mut greater = nums.len() - 1; while
+        // i <= greater
         //...
-        //nums.swap(i, greater);
-        //这么写，当nums = [2, 2]，greater = 0也是可以进入到while循环的，因为始终i=0
-        //循环中，greater -= 1；导致溢出。
-        //这种循环中-1的，都应该避免=0时进入循环。
+        // nums.swap(i, greater);
+        // 如果这么写，
+        // 当nums = [2, 2]时，greater = 0
+        // 也是可以进入到while循环的，
+        // 因为始终i=0循环中，greater -= 1；
+        // 导致溢出。这种循环中-1的，
+        // 都应该避免=0时进入循环。
         while i < greater {
             if nums[i] < target {
                 nums.swap(i, less);
                 less += 1;
                 i += 1
-            }else if nums[i] > target {
-                nums.swap(i, greater-1);
+            } else if nums[i] > target {
+                nums.swap(i, greater - 1);
                 greater -= 1;
-            }else {
+            } else {
                 i += 1;
             }
         }

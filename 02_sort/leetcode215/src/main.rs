@@ -6,13 +6,15 @@ impl Solution {
     pub fn bubble_sort<T: Ord>(nums: &mut Vec<T>) {
         let n = nums.len();
 
-        // 外层循环，控制总循环次数，每次找到一个未被固定的最大的数字，固定到数组最末尾。
+        // 外层循环，控制总循环次数，
+        // 每次找到一个未被固定的最大的数字，固定到数组最末尾。
         for i in 0..n {
-            // 内层循环，控制比较范围，外层每次循环都是找到一个违背固定的最大数值固定末尾，
+            // 内层循环，控制比较范围，
+            // 外层每次循环都是找到一个违背固定的最大数值固定末尾，
             // 因此内层循环要避开比较固定的数值。
-            for j in 0..n-i-1 {
-                if nums[j] > nums[j+1] {
-                    nums.swap(j, j+1);
+            for j in 0..n - i - 1 {
+                if nums[j] > nums[j + 1] {
+                    nums.swap(j, j + 1);
                 }
             }
         }
@@ -21,12 +23,14 @@ impl Solution {
     pub fn select_sort<T: Ord>(nums: &mut Vec<T>) {
         let n = nums.len();
 
-        // 外层循环，控制总循环次数，每次找到一个未被固定的最小数值的index，然后和固定区的边界index交换。
+        // 外层循环，控制总循环次数，
+        // 每次找到一个未被固定的最小数值的index，
+        // 然后和固定区的边界index交换。
         for i in 0..n {
             let mut min_index = i;
-            
+
             // 在未固定区域中找到最小值的index
-            for j in i+1..n {
+            for j in i + 1..n {
                 if nums[j] < nums[min_index] {
                     min_index = j;
                 }
@@ -36,20 +40,23 @@ impl Solution {
         }
     }
 
-    pub fn insert_sort<T: Ord + Clone + Copy>(nums: &mut Vec<T>) {
+    pub fn insert_sort<T: Ord + Clone + Copy>(
+        nums: &mut Vec<T>,
+    ) {
         let n = nums.len();
 
+        // 和前一个元素比较，如果小于前一个元素,
+        // 就把前一个元素复制到后一个元素，为后面的“插入”腾挪位置。
+        // 不是真正的插入，而是大于cur的元素都复制了一遍，
+        // 覆盖了后面的位置。
+        // 最后一个大于cur的元素在while退出时，复制了两次，
+        // 所以在退出后，可以把该元素的位置覆盖cur。
+        // 使用insert最大的问题在于insert操作会破坏最外层的for循环。
         for i in 1..n {
             let cur = nums[i];
             let mut j = i;
-            // 和前一个元素比较，如果小于前一个元素就把前一个元素复制到后一个元素，为后面的“插入”腾挪位置。
-            // 不是真正的插入，而是大于cur的元素都复制了一遍，覆盖了后面的位置，
-            // 最后一个大于cur的元素在while退出时，复制了两次，所以在退出后，可以把该元素的位置覆盖cur。
-            // 使用真正的insert，会导致nums长度增加，当len > cap时，nums在heap上的整体转移将耗费性能。
-            // 但每个元素最多只会insert一次，因此长度最多x2，对于每次cap扩容一倍的语言，只会发生一次整体迁移。
-            // 但使用insert最大的问题在于insert操作会破坏最外层的for循环。
-            while j > 0 && cur < nums[j-1] {
-                nums[j] = nums[j-1];
+            while j > 0 && cur < nums[j - 1] {
+                nums[j] = nums[j - 1];
                 j -= 1;
             }
             nums[j] = cur;
@@ -62,7 +69,8 @@ impl Solution {
     //        /   \       /   \
     //      C       D   E       F
     // 递归压栈顺序ACDBEF
-    // 处理顺序CDAEFBroot，类似于后序遍历。
+    // 处理顺序CDAEFBroot，
+    // 类似于后序遍历。
     pub fn merge_sort(nums: &mut [i32]) {
         let mid = nums.len() / 2;
         if mid == 0 {
@@ -72,7 +80,8 @@ impl Solution {
         Self::merge_sort(&mut nums[..mid]);
         Self::merge_sort(&mut nums[mid..]);
 
-        // 停止递归并第一次返回后，left和right都是长度=1的切片。
+        // 停止递归并第一次返回后，
+        // left和right都是长度=1的切片。
         // 先对nums的left和right两部分排序，结果保存到ret中。
         let mut ret = nums.to_vec();
 
@@ -82,8 +91,11 @@ impl Solution {
     }
 
     fn merge(left: &[i32], right: &[i32], ret: &mut [i32]) {
-        // println!("left length = {}, left = {:?}", left.len(), left);
-        // println!("right length = {}, right = {:?}", right.len(), right);
+        // println!("left length = {},
+        // left = {:?}", left.len(),
+        // left); println!("right length
+        // = {}, right =
+        // {:?}", right.len(), right);
         // println!("");
         let mut i = 0;
         let mut j = 0;
@@ -94,7 +106,7 @@ impl Solution {
                 ret[k] = left[i];
                 k += 1;
                 i += 1;
-            }else {
+            } else {
                 ret[k] = right[j];
                 k += 1;
                 j += 1;
@@ -139,7 +151,7 @@ impl Solution {
         }
 
         // 退出for循环后的i处元素是大于pivot，彼此交换即可
-        nums.swap(i, n-1);
+        nums.swap(i, n - 1);
 
         // 返回基准元素index
         i

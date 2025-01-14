@@ -1,4 +1,4 @@
-pub struct Solution{}
+pub struct Solution {}
 
 impl Solution {
     pub fn valid_palindrome(s: String) -> bool {
@@ -7,7 +7,8 @@ impl Solution {
         let mut right = s.len() - 1;
         while left < right {
             if s[left] != s[right] {
-                return  helper(&s, left+1, right) || helper(&s, left, right-1)
+                return helper(&s, left + 1, right)
+                    || helper(&s, left, right - 1);
             }
             left += 1;
             right -= 1;
@@ -28,6 +29,7 @@ fn helper(s: &[u8], mut start: usize, mut end: usize) -> bool {
 }
 
 fn main() {
-    let result = Solution::valid_palindrome(String::from("afbca"));
+    let result =
+        Solution::valid_palindrome(String::from("afbca"));
     println!("result = {}", result);
 }

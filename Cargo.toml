@@ -19,7 +19,9 @@ members = [
     "02_sort/leetcode451",
     "02_sort/leetcode75", 
     "03_greedy/leetcode455", 
-    "03_greedy/leetcode435",
+    "03_greedy/leetcode435", 
+    "03_greedy/leetcode452", 
+    "03_greedy/leetcode406",
 ]
 
 [dependencies]
