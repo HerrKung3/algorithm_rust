@@ -7,6 +7,10 @@ name = "algorithm_rust"
 version = "0.1.0"
 
 [[package]]
+name = "leetcode121"
+version = "0.1.0"
+
+[[package]]
 name = "leetcode141"
 version = "0.1.0"
 
