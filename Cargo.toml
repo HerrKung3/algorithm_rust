@@ -23,7 +23,8 @@ members = [
     "03_greedy/leetcode452", 
     "03_greedy/leetcode406", 
     "03_greedy/leetcode121", 
-    "03_greedy/leetcode122",
+    "03_greedy/leetcode122", 
+    "03_greedy/leetcode605",
 ]
 
 [dependencies]
