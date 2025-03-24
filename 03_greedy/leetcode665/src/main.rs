@@ -25,11 +25,24 @@ pub struct Solution {}
 // }
 
 impl Solution {
-    pub fn check_possibility(mut nums: Vec<i32>) -> bool {
+    pub fn check_possibility1(mut nums: Vec<i32>) -> bool {
+        if nums.len() <= 2 {
+            return true;
+        }
+
         // 记录修改次数
         let mut change_times = 1;
 
         for i in 0..nums.len() - 1 {
+            if i == 0
+                && nums[i] > nums[i + 1]
+                && change_times >= 0
+            {
+                change_times -= 1;
+                nums[i] = nums[i + 1];
+                continue;
+            }
+
             if nums[i] > nums[i + 1] && change_times >= 0 {
                 change_times -= 1;
                 let temp = nums[i];
@@ -37,14 +50,14 @@ impl Solution {
                 nums[i] = nums[i + 1];
                 // 判断第一次尝试之后的数组是否满足要求,
                 // 不满足则第二次尝试
-                if !is_non_decreasing(&nums) {
+                if !is_non_decreasing(&nums[(i - 1)..]) {
                     nums[i] = temp;
                     nums[i + 1] = temp;
-                    return is_non_decreasing(&nums);
+                    return is_non_decreasing(&nums[(i - 1)..])
+                        && change_times >= 0;
                 }
             }
         }
-
         return change_times >= 0;
     }
 }
@@ -58,9 +71,10 @@ fn is_non_decreasing(nums: &[i32]) -> bool {
 }
 
 fn main() {
-    let nums = vec![3, 4, 2, 3];
+    // let nums = vec![3, 4, 2, 3];
+    let nums = vec![4, 2, 1];
 
-    let res = Solution::check_possibility(nums);
+    let res = Solution::check_possibility1(nums);
 
     println!("result: {}", res);
 }
