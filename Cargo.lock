@@ -87,5 +87,9 @@ name = "leetcode75"
 version = "0.1.0"
 
 [[package]]
+name = "leetcode763"
+version = "0.1.0"
+
+[[package]]
 name = "leetcode88"
 version = "0.1.0"
