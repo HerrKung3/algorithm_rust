@@ -29,7 +29,8 @@ members = [
     "03_greedy/leetcode665", 
     "03_greedy/leetcode63", 
     "03_greedy/leetcode763", 
-    "04_binary_search/leetcode69",
+    "04_binary_search/leetcode69", 
+    "04_binary_search/leetcode744",
 ]
 
 [dependencies]
