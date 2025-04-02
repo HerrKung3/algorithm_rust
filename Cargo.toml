@@ -31,7 +31,7 @@ members = [
     "03_greedy/leetcode763", 
     "04_binary_search/leetcode69", 
     "04_binary_search/leetcode744", 
-    "04_binary_search/leetcode540",
+    "04_binary_search/leetcode540", "04_binary_search/leetcode278",
 ]
 
 [dependencies]
