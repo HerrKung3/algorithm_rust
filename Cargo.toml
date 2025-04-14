@@ -34,7 +34,8 @@ members = [
     "04_binary_search/leetcode540", 
     "04_binary_search/leetcode278", 
     "04_binary_search/leetcode153", 
-    "04_binary_search/leetcode34",
+    "04_binary_search/leetcode34", 
+    "05_divide_and_conquer/leetcode241",
 ]
 
 [dependencies]
